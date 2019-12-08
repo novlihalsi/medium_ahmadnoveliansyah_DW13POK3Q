@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-// import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
 import TransitionModal from '../Register';
+import ModalLogin from '../Login';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,20 +17,21 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
   },
+  
 }));
 
 function ButtonAppBar() {
   const classes = useStyles();
 
+
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color="white">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-          </IconButton>
           <Typography variant="h6" className={classes.title}>
             Medium
           </Typography>
+          <ModalLogin/>
           <TransitionModal/>
         </Toolbar>
       </AppBar>
