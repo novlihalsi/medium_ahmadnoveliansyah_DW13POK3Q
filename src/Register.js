@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     width : '900px',
     height : '566px',
     backgroundColor: theme.palette.background.paper,
-    boxShadow: theme.shadows[5],
+    // boxShadow: theme.shadows[5],
   },
 
   
@@ -80,8 +80,8 @@ const useStyles = makeStyles(theme => ({
                     <Typography variant='subtitle2' style={{color: 'grey'}}>To make Medium work, we log user data and share it with service providers. Click “Sign Up” above to accept Medium’s <a href='#' >Terms of Service</a> & <a href='#'>Privacy Policy</a>.</Typography>
                 </div>
             </div>
-            <div style={{width:'214px'}}>
-              <div style={{float: 'right'}}><Button size='small' onClick={handleClose}><CloseIcon/></Button></div>
+            <div style={{width:'214px', position: 'relative'}}>
+              <div style={{position: 'absolute', top: '0px', right:'0px'}}><Button size='small' onClick={handleClose}><CloseIcon/></Button></div>
               <img src={'https://miro.medium.com/max/214/1*lhbp8cxKdkDB-MgmwIPE5w.png'} alt="#" style={{height: '100%' ,width: '100%'}}/></div>
           </div>
         </Fade>

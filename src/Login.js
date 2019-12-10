@@ -72,14 +72,16 @@ const useStyles = makeStyles(theme => ({
                     </Button>
                 </div>
                 <div>
-                    <Typography style={{fontWeight: 'bold' , marginTop: '10px', marginBottom: '10px'}}><Button color='primary'><ChevronLeftIcon/>All sign in options</Button></Typography>
+                    <Typography style={{fontWeight: 'bold' , marginTop: '10px', marginBottom: '10px'}}>
+                      <Button color='primary'><ChevronLeftIcon/>All sign in options</Button>
+                    </Typography>
                 </div>
                 <div>
                 
                 </div>
             </div>
-            <div style={{width:'214px'}}>
-            <div style={{float: 'right'}}><Button size='small' onClick={handleClose}><CloseIcon/></Button></div>
+            <div style={{width:'214px', position: 'relative'}}>
+            <div style={{ position: 'absolute',top : '0px',right: '0px'}}><Button size='small' onClick={handleClose}><CloseIcon/></Button></div>
               <img src={'https://miro.medium.com/max/214/1*XVLaTKHOGlnXqvnPe2Ahaw.png'} alt="#" style={{height: '100%' ,width: '100%'}}/>
             </div>
           </div>
