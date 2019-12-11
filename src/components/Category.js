@@ -1,67 +1,91 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Toolbar from '@material-ui/core/Toolbar';
-// import Link from '@material-ui/core/Link';
+import React, { Component } from 'react';
+import ScrollMenu from 'react-horizontal-scrolling-menu';
+import { Button } from '@material-ui/core';
 import {Link} from 'react-router-dom';
-import Button from '@material-ui/core/Button'
 
+ 
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-    marginBottom: '20px',
-  },
-
-  toolbarLink: {
-    padding: theme.spacing(1),
-    flexShrink: 0,
-  },
-  toolbarSecondary: {
-    justifyContent: 'space-between',
-    overflowX: 'auto',
-    paddingLeft: '50px',
-    paddingRight: '50px'
-  },
+// list of items
+const list = [
+    { name: 'HOME', url: '#' },
+    { name: 'ONEZERO', url: '/categorypage' },
+    { name: 'ELEMENTAL', url: '#' },
+    { name: 'GEN', url: '#' },
+    { name: 'ZORA', url: '#' },
+    { name: 'FORGE', url: '#' },
+    { name: 'HUMAN PARTS', url: '#' },
+    { name: 'MARKER', url: '#' },
+    { name: 'LEVEL', url: '#' },
+    { name: 'MODUS', url: '#' },
+    { name: 'MC', url: '#' },
+    
+  ];
+ 
+// One item component
+// selected prop will be passed
+const MenuItem = ({text, selected, url}) => {
+  return<Link to={url}><Button style={{marginRight:'10px'}}>{text}</Button></Link>
   
-}));
-
-const sections = [
-  { title: 'HOME', url: '#' },
-  { title: 'ONEZERO', url: '/CategoryPage' },
-  { title: 'ELEMENTAL', url: '#' },
-  { title: 'GEN', url: '#' },
-  { title: 'ZORA', url: '#' },
-  { title: 'FORGE', url: '#' },
-  { title: 'HUMAN PARTS', url: '#' },
-  { title: 'MARKER', url: '#' },
-  { title: 'LEVEL', url: '#' },
-  { title: 'HEATED', url: '#' },
-  { title: 'MODUS', url: '#' },
-  { title: 'MC', url: '#' },
-];
-
-
-
-
-
-function Category() {
-  const classes = useStyles();
-
-  // const { sections } = props;
-
-
+  // <div style={style.menuitem}>{text}</div>;
+};
+ 
+// All items component
+// Important! add unique key
+export const Menu = (list, selected) =>
+  list.map(el => {
+    const {name, url} = el;
+ 
+    return <MenuItem text={name} key={name} url={url} selected={selected} />;
+  });
+ 
+ 
+const Arrow = ({ text, className }) => {
   return (
-    <div className={classes.root}>
-      <div>
-        <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
-        {sections.map(section => (
-        <Link to={section.url}><Button>{section.title}</Button></Link>
-          
-        ))}
-      </Toolbar>
-      </div>
-    </div>
+    <div
+      
+    >{text}</div>
   );
+};
+ 
+ 
+const ArrowLeft = Arrow({ text: '<', className: 'arrow-prev' });
+const ArrowRight = Arrow({ text: '>', className: 'arrow-next' });
+ 
+const selected = 'item1';
+ 
+class Category extends Component {
+  constructor(props) {
+    super(props);
+    // call it again if items count changes
+    this.menuItems = Menu(list, selected);
+  }
+ 
+  state = {
+    selected
+  };
+ 
+  onSelect = key => {
+    this.setState({ selected: key });
+  }
+ 
+ 
+  render() {
+    const { selected } = this.state;
+    // Create menu from items
+    const menu = this.menuItems;
+ 
+    return (
+      <div style={{marginBottom:10}}>
+        <ScrollMenu
+          data={menu}
+          arrowLeft={ArrowLeft}
+          arrowRight={ArrowRight}
+          selected={selected}
+          onSelect={this.onSelect}
+        />
+      </div>
+    );
+  }
 }
 
 export default Category;

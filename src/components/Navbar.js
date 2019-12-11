@@ -1,6 +1,6 @@
 import React from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
-// import AppBar from '@material-ui/core/AppBar';
+import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Register from '../Register';
@@ -24,7 +24,8 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
     textDecoration: 'none',
-    '&:visited': {color: 'black'}
+    '&:visited': {color: 'black'},
+    
   },
 
 
@@ -76,10 +77,10 @@ function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      {/* <AppBar position="fixed" color="white"> */}
+      <AppBar position="static" color="white">
       {/* <React.Fragment> */}
       <div>
-        <Toolbar>
+        <Toolbar style={{marginRight:320, marginLeft:330}}>
           <Link to="/" className={classes.title}><Typography variant="h4">
             Medium
           </Typography></Link>
@@ -113,7 +114,7 @@ function ButtonAppBar() {
           
         </Toolbar>
       </div>
-      {/* </AppBar> */}
+      </AppBar>
       {/* </React.Fragment> */}
      </div>
   );

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Home from './content/Home';
+import ArticleDetails from './content/ArticleDetails'
 
 
 class App extends Component {
@@ -7,9 +8,9 @@ class App extends Component {
   render () {
     return (
 
-      // <Container maxWidth="lg">
       <div>
           <Home/>
+          {/* <ArticleDetails/> */}
 
       </div>
      

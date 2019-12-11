@@ -4,14 +4,28 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import Typography from '@material-ui/core/Typography';
+import {Link} from 'react-router-dom'
+
+
+const style = {
+
+    title: {
+        flexGrow: 1,
+        textDecoration: 'none',
+        '&:visited': {fontColor: 'black'},
+        
+      },
 
 
 
+
+}
 
 const Article = (props) => {
     return(
-        <CardActionArea>
-            <Card style={{height:'395px'}}>
+        // <CardActionArea>
+            
+            <Card elevation="0" style={{height:'395px'}}>
                 <CardMedia
                 style={{width:'399px', height:'150px', margin:'auto'}}
                 image={props.url}
@@ -19,9 +33,9 @@ const Article = (props) => {
                 />
                 <div >
                     <CardContent>
-                    <Typography component="h5" variant="h5" paragraph='1' style={{fontWeight:'bold'}}>
+                    <Link to="/articledetail" style={style.title}><Typography component="h5" variant="h5" paragraph='1' style={{fontWeight:'bold',color:'black'}}>
                         {props.judul}
-                    </Typography>
+                    </Typography></Link>
                     <Typography variant="subtitle2" color="textSecondary" paragraph='1px'>
                         {props.isi}
                     </Typography>
@@ -34,7 +48,8 @@ const Article = (props) => {
                     </CardContent>
                 </div>
             </Card>
-        </CardActionArea>
+            
+        // </CardActionArea>
     );
 
 }

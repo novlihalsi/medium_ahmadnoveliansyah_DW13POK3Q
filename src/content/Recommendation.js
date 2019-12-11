@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 const Recommendation = (props) => {
     return(
         
-        <Card style={{height:'150px', display:'flex', marginBottom:'20px'}}>
+        <Card elevation="0" style={{height:'150px', display:'flex', marginBottom:'20px'}}>
             
             <div style={{flex:'1'}}>
             <CardActionArea>

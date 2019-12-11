@@ -9,12 +9,17 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import Recommendation from './Recommendation'
+import {recommendation} from './Home'
+
+
 
 class CategoryPage extends Component {
+    
     render() {
+        
         return(
             <div>
-                <div style={{margin:'0 350px 80px 350px'}}>
+                <div style={{margin:'0 0 80px 0'}}>
                 <ButtonAppBar/>
                 </div>
                 <div style={{margin:'0 350px 0 350px'}}>
@@ -80,7 +85,7 @@ class CategoryPage extends Component {
                                             <Typhography variant='h5' style={{color:'black', paddingTop: '20px'}}>
                                                 Architects Are Playing With the Future of Design in Video Games
                                             </Typhography>
-
+                                            import recommendation from './Home'
                                             <Typhography variant='subtitle1' style={{color:'black', paddingTop:'20px'}}>
                                             Game worlds can be blueprints for the real world, liberating spaces where rules can be reinvented and the invisible made visible
                                             </Typhography>
@@ -165,36 +170,15 @@ class CategoryPage extends Component {
                 <div style={{margin:'40px 600px 0 600px'}}>
                     <div style={{marginBottom:'40px'}}><hr/></div>
 
-                    <Recommendation 
-                    url="https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg" 
-                    judul="One Man’s Execution Convinced Me the Death Penalty Is Wrong" 
-                    isi="I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" 
-                    user="D.A. Kirk" 
-                    time="Dec 13, 2018 · 7 min read"/>
-
-                    <Recommendation 
-                    url="https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg" 
-                    judul="One Man’s Execution Convinced Me the Death Penalty Is Wrong" 
-                    isi="I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" 
-                    user="D.A. Kirk" 
-                    time="Dec 13, 2018 · 7 min read"/>
-
-                    <Recommendation 
-                    url="https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg" 
-                    judul="One Man’s Execution Convinced Me the Death Penalty Is Wrong" 
-                    isi="I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" 
-                    user="D.A. Kirk" 
-                    time="Dec 13, 2018 · 7 min read"/>
-
-                    <Recommendation 
-                    url="https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg" 
-                    judul="One Man’s Execution Convinced Me the Death Penalty Is Wrong" 
-                    isi="I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" 
-                    user="D.A. Kirk" 
-                    time="Dec 13, 2018 · 7 min read"/>
-
-                    
-
+                    {recommendation.map(item => 
+                    <Recommendation
+                      url={item.url}
+                      judul={item.judul} 
+                      isi={item.isi}
+                      user={item.user}
+                      time={item.time}
+                    />
+                    )}
 
                 </div>
 

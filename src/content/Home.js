@@ -12,6 +12,7 @@ import Popular from './Popular';
 
 
 
+
 const miniarticles = [
   {
     url:"https://miro.medium.com/max/7079/1*GyMABXd3bEZBoT5cTMy1NQ.jpeg",
@@ -84,6 +85,49 @@ const popular = [
   },
 ]
 
+ export const recommendation = [
+    
+    {
+      url:"https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg",
+      judul:"One Man’s Execution Convinced Me the Death Penalty Is Wrong" ,
+      isi: "I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" ,
+      user: "D.A. Kirk" ,
+      time: "Dec 13, 2018 · 7 min read",
+    },
+
+    {
+      url:"https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg",
+      judul:"One Man’s Execution Convinced Me the Death Penalty Is Wrong" ,
+      isi: "I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" ,
+      user: "D.A. Kirk" ,
+      time: "Dec 13, 2018 · 7 min read",
+    },
+
+    {
+      url:"https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg",
+      judul:"One Man’s Execution Convinced Me the Death Penalty Is Wrong" ,
+      isi: "I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" ,
+      user: "D.A. Kirk" ,
+      time: "Dec 13, 2018 · 7 min read",
+    },
+
+    {
+      url:"https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg",
+      judul:"One Man’s Execution Convinced Me the Death Penalty Is Wrong" ,
+      isi: "I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" ,
+      user: "D.A. Kirk" ,
+      time: "Dec 13, 2018 · 7 min read",
+    },
+
+    {
+      url:"https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg",
+      judul:"One Man’s Execution Convinced Me the Death Penalty Is Wrong" ,
+      isi: "I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" ,
+      user: "D.A. Kirk" ,
+      time: "Dec 13, 2018 · 7 min read",
+    },
+
+  ]
   
 
 
@@ -94,7 +138,7 @@ class Home extends Component {
 
       // <Container maxWidth="lg">
       <div>
-          <div style={{margin:'0 350px 0 350px'}}>
+          <div >
             <ButtonAppBar/>
             
           </div>
@@ -108,11 +152,11 @@ class Home extends Component {
               
                 <Grid container spacing={2}>
                   <Grid item md={4}>
-                  <Article url="https://miro.medium.com/max/4750/1*hjnZmMS2URkaXm52z8J5EQ.png" 
-                    judul="Delete Your Slack Messages Right Now. Here’s How." 
-                    isi="For employees of the suitcase company Away, it might have been valid complaints in a private Slack channel about how the company was not as progressive" 
-                    user="Dave Gershgorn" 
-                    time="Dec 6 · 3 min read"/>
+                      <Article url="https://miro.medium.com/max/4195/1*cWrckQhDDGxKiwpb6YtPtg.jpeg" 
+                        judul="The Greatest Sales Deck I’ve Ever Seen" 
+                        isi="For employees of the suitcase company Away, it might have been valid complaints in a private Slack channel about how the company was not as progressive" 
+                        user="Andy Raskin" 
+                        time="Dec 6 · 3 min read"/>
                   </Grid>
                   <Grid container item md={4}>
                     {miniarticles.map(item => 
@@ -178,36 +222,15 @@ class Home extends Component {
                 </Grid>
                 <Grid item xs={7}>
                   <div style={{}}>
-                  <Recommendation 
-                    url="https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg" 
-                    judul="One Man’s Execution Convinced Me the Death Penalty Is Wrong" 
-                    isi="I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" 
-                    user="D.A. Kirk" 
-                    time="Dec 13, 2018 · 7 min read"/>
-                    <Recommendation 
-                    url="https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg" 
-                    judul="One Man’s Execution Convinced Me the Death Penalty Is Wrong" 
-                    isi="I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" 
-                    user="D.A. Kirk" 
-                    time="Dec 13, 2018 · 7 min read"/>
-                    <Recommendation 
-                    url="https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg" 
-                    judul="One Man’s Execution Convinced Me the Death Penalty Is Wrong" 
-                    isi="I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" 
-                    user="D.A. Kirk" 
-                    time="Dec 13, 2018 · 7 min read"/>
-                    <Recommendation 
-                    url="https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg" 
-                    judul="One Man’s Execution Convinced Me the Death Penalty Is Wrong" 
-                    isi="I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" 
-                    user="D.A. Kirk" 
-                    time="Dec 13, 2018 · 7 min read"/>
-                    <Recommendation 
-                    url="https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg" 
-                    judul="One Man’s Execution Convinced Me the Death Penalty Is Wrong" 
-                    isi="I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" 
-                    user="D.A. Kirk" 
-                    time="Dec 13, 2018 · 7 min read"/>
+                  {recommendation.map(item => 
+                    <Recommendation
+                      url={item.url}
+                      judul={item.judul} 
+                      isi={item.isi}
+                      user={item.user}
+                      time={item.time}
+                    />
+                    )}
 
                   </div>
                 </Grid>

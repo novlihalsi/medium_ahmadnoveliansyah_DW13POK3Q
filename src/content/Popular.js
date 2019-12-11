@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const Popular = (props) => {
     return(
         
-        <Card style={{height:'100px', display:'flex', marginBottom:'20px'}}>
+        <Card elevation="0" style={{height:'100px', display:'flex', marginBottom:'20px'}}>
             
             <div style={{flex:'1'}}>
             <CardActionArea>

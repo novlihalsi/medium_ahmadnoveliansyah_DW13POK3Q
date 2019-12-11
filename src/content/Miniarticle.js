@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 const MiniArticle = (props) => {
     return(
         <CardActionArea>
-            <Card style={{height:'120px', display:'flex'}}>
+            <Card elevation="0" style={{height:'120px', display:'flex'}}>
                 <CardMedia
                 style={{width:'117px'}}
                 image={props.url}
