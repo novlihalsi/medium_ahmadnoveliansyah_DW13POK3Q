@@ -11,6 +11,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import IconButton from '@material-ui/core/IconButton'
+import Follow from '../components/Follow';
 
 
 const style = {
@@ -126,12 +127,22 @@ class ArticleDetails extends Component {
                                         </Typography>
                                     </Grid>
 
+                                    <Grid item xs={12} style={{marginTop:20, marginRight:100}}>
+                                        <Follow/>
+                                    </Grid>
+
                                 </Grid>
 
                             </Grid>
 
                         </Grid>
+
+                        
+
+                        
                     </div>
+
+                   
                     
 
 
