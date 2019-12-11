@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Modal, makeStyles, Backdrop, Fade, TextField, Typography } from '@material-ui/core';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+// import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import CloseIcon from '@material-ui/icons/Close';
+import Register from './Register';
 
 
 const useStyles = makeStyles(theme => ({
@@ -24,7 +25,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-   function ModalLogin() {
+   function ModalLogin(props) {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
   
@@ -39,8 +40,8 @@ const useStyles = makeStyles(theme => ({
     return (
       
       <div>
-        <Button color="inherit" onClick={handleOpen}>
-          Sign in
+        <Button color="primary" onClick={handleOpen}>
+          {props.name}
         </Button>
         <Modal
         className={classes.modal}
@@ -72,9 +73,9 @@ const useStyles = makeStyles(theme => ({
                     </Button>
                 </div>
                 <div>
-                    <Typography style={{fontWeight: 'bold' , marginTop: '10px', marginBottom: '10px'}}>
-                      <Button color='primary'><ChevronLeftIcon/>All sign in options</Button>
-                    </Typography>
+                    
+                    <Register name="< All sign in options" color="primary"/>
+                    
                 </div>
                 <div>
                 

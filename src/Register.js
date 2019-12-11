@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-   function TransitionsModal() {
+   function Register(props) {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
   
@@ -39,8 +39,8 @@ const useStyles = makeStyles(theme => ({
     return (
       
       <div>
-        <Button color="inherit" onClick={handleOpen}>
-          Sign Up
+        <Button variant={props.variant} onClick={handleOpen} color={props.color}>
+          {props.name}
         </Button>
         <Modal
         className={classes.modal}
@@ -74,7 +74,7 @@ const useStyles = makeStyles(theme => ({
                     </Button>
                 </div>
                 <div>
-                    <Typography style={{fontWeight: 'bold' , marginTop: '10px', marginBottom: '10px'}}>Already have an account? <ModalLogin/></Typography>
+                    <Typography style={{fontWeight: 'bold' , marginTop: '10px', marginBottom: '10px'}}>Already have an account? <ModalLogin name="Sign In"/></Typography>
                 </div>
                 <div>
                     <Typography variant='subtitle2' style={{color: 'grey'}}>To make Medium work, we log user data and share it with service providers. Click “Sign Up” above to accept Medium’s <a href='#' >Terms of Service</a> & <a href='#'>Privacy Policy</a>.</Typography>
@@ -95,4 +95,4 @@ const useStyles = makeStyles(theme => ({
     }
       
 
-      export default TransitionsModal;
+      export default Register;

@@ -1,7 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
-import Link from '@material-ui/core/Link';
+// import Link from '@material-ui/core/Link';
+import {Link} from 'react-router-dom';
+import Button from '@material-ui/core/Button'
 
 
 const useStyles = makeStyles(theme => ({
@@ -23,14 +25,29 @@ const useStyles = makeStyles(theme => ({
   
 }));
 
+const sections = [
+  { title: 'HOME', url: '#' },
+  { title: 'ONEZERO', url: '/CategoryPage' },
+  { title: 'ELEMENTAL', url: '#' },
+  { title: 'GEN', url: '#' },
+  { title: 'ZORA', url: '#' },
+  { title: 'FORGE', url: '#' },
+  { title: 'HUMAN PARTS', url: '#' },
+  { title: 'MARKER', url: '#' },
+  { title: 'LEVEL', url: '#' },
+  { title: 'HEATED', url: '#' },
+  { title: 'MODUS', url: '#' },
+  { title: 'MC', url: '#' },
+];
 
 
 
 
-function Category(props) {
+
+function Category() {
   const classes = useStyles();
 
-  const { sections } = props;
+  // const { sections } = props;
 
 
   return (
@@ -38,16 +55,8 @@ function Category(props) {
       <div>
         <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
         {sections.map(section => (
-          <Link
-            color="inherit"
-            noWrap
-            key={section.title}
-            variant="body2"
-            href={section.url}
-            className={classes.toolbarLink}
-          >
-            {section.title}
-          </Link>
+        <Link to={section.url}><Button>{section.title}</Button></Link>
+          
         ))}
       </Toolbar>
       </div>
