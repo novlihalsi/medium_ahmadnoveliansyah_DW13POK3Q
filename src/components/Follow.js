@@ -8,6 +8,7 @@ import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Typography from '@material-ui/core/Typography'
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import {Link} from 'react-router-dom'
 
 
 const tag = [
@@ -103,7 +104,7 @@ class Follow extends Component {
                     <hr/>
                 </div>
                 <div style={{display:'flex', flex:'1', flexDirection:'column', marginBottom:50, marginTop:20}}>
-                    <Button variant="outlined" style={{height:50, color:'green'}}>See Responses</Button>
+                    <Link to="/comment" style={{display:'flex', flex:'1', flexDirection:'column', textDecoration:'none'}}><Button variant="outlined" style={{height:50, color:'green'}}>See Responses</Button></Link>
                 </div>
                 
                 

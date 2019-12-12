@@ -24,7 +24,7 @@ const list = [
 // One item component
 // selected prop will be passed
 const MenuItem = ({text, selected, url}) => {
-  return<Link to={url}><Button style={{marginRight:'10px'}}>{text}</Button></Link>
+  return<Link style={{textDecoration:'none'}} to={url}><Button style={{marginRight:'10px'}}>{text}</Button></Link>
   
   // <div style={style.menuitem}>{text}</div>;
 };
