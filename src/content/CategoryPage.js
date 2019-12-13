@@ -85,7 +85,6 @@ class CategoryPage extends Component {
                                             <Typhography variant='h5' style={{color:'black', paddingTop: '20px'}}>
                                                 Architects Are Playing With the Future of Design in Video Games
                                             </Typhography>
-                                            import recommendation from './Home'
                                             <Typhography variant='subtitle1' style={{color:'black', paddingTop:'20px'}}>
                                             Game worlds can be blueprints for the real world, liberating spaces where rules can be reinvented and the invisible made visible
                                             </Typhography>
