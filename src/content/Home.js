@@ -34,8 +34,6 @@ const miniarticles = [
     user:"Dave Gershgorn", 
     time:"Dec 6 · 3 min read"
   }
-
-
 ]
 
 const popular = [
@@ -85,49 +83,49 @@ const popular = [
   },
 ]
 
- export const recommendation = [
+export const recommendation = [
     
-    {
-      url:"https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg",
-      judul:"One Man’s Execution Convinced Me the Death Penalty Is Wrong" ,
-      isi: "I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" ,
-      user: "D.A. Kirk" ,
-      time: "Dec 13, 2018 · 7 min read",
-    },
+  {
+    url:"https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg",
+    judul:"One Man’s Execution Convinced Me the Death Penalty Is Wrong" ,
+    isi: "I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" ,
+    user: "D.A. Kirk" ,
+    time: "Dec 13, 2018 · 7 min read",
+  },
 
-    {
-      url:"https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg",
-      judul:"One Man’s Execution Convinced Me the Death Penalty Is Wrong" ,
-      isi: "I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" ,
-      user: "D.A. Kirk" ,
-      time: "Dec 13, 2018 · 7 min read",
-    },
+  {
+    url:"https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg",
+    judul:"One Man’s Execution Convinced Me the Death Penalty Is Wrong" ,
+    isi: "I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" ,
+    user: "D.A. Kirk" ,
+    time: "Dec 13, 2018 · 7 min read",
+  },
 
-    {
-      url:"https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg",
-      judul:"One Man’s Execution Convinced Me the Death Penalty Is Wrong" ,
-      isi: "I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" ,
-      user: "D.A. Kirk" ,
-      time: "Dec 13, 2018 · 7 min read",
-    },
+  {
+    url:"https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg",
+    judul:"One Man’s Execution Convinced Me the Death Penalty Is Wrong" ,
+    isi: "I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" ,
+    user: "D.A. Kirk" ,
+    time: "Dec 13, 2018 · 7 min read",
+  },
 
-    {
-      url:"https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg",
-      judul:"One Man’s Execution Convinced Me the Death Penalty Is Wrong" ,
-      isi: "I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" ,
-      user: "D.A. Kirk" ,
-      time: "Dec 13, 2018 · 7 min read",
-    },
+  {
+    url:"https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg",
+    judul:"One Man’s Execution Convinced Me the Death Penalty Is Wrong" ,
+    isi: "I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" ,
+    user: "D.A. Kirk" ,
+    time: "Dec 13, 2018 · 7 min read",
+  },
 
-    {
-      url:"https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg",
-      judul:"One Man’s Execution Convinced Me the Death Penalty Is Wrong" ,
-      isi: "I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" ,
-      user: "D.A. Kirk" ,
-      time: "Dec 13, 2018 · 7 min read",
-    },
+  {
+    url:"https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg",
+    judul:"One Man’s Execution Convinced Me the Death Penalty Is Wrong" ,
+    isi: "I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" ,
+    user: "D.A. Kirk" ,
+    time: "Dec 13, 2018 · 7 min read",
+  },
 
-  ]
+]
   
 
 
@@ -152,28 +150,28 @@ class Home extends Component {
               
                 <Grid container spacing={2}>
                   <Grid item md={4}>
-                      <Article url="https://miro.medium.com/max/4195/1*cWrckQhDDGxKiwpb6YtPtg.jpeg" 
-                        judul="The Greatest Sales Deck I’ve Ever Seen" 
-                        isi="For employees of the suitcase company Away, it might have been valid complaints in a private Slack channel about how the company was not as progressive" 
-                        user="Andy Raskin" 
-                        time="Dec 6 · 3 min read"/>
+                    <Article url="https://miro.medium.com/max/4195/1*cWrckQhDDGxKiwpb6YtPtg.jpeg" 
+                      judul="The Greatest Sales Deck I’ve Ever Seen" 
+                      isi="For employees of the suitcase company Away, it might have been valid complaints in a private Slack channel about how the company was not as progressive" 
+                      user="Andy Raskin" 
+                      time="Dec 6 · 3 min read"/>
                   </Grid>
                   <Grid container item md={4}>
                     {miniarticles.map(item => 
-                     <MiniArticle
-                     url={item.url}
-                     judul={item.judul} 
-                     user={item.user}
-                     time={item.time}/>  
+                      <MiniArticle
+                        url={item.url}
+                        judul={item.judul} 
+                        user={item.user}
+                        time={item.time}/>  
                       )}
                   </Grid>
                   <Grid item md={4}>
-                  <Article 
-                    url="https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg" 
-                    judul="One Man’s Execution Convinced Me the Death Penalty Is Wrong" 
-                    isi="I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" 
-                    user="D.A. Kirk" 
-                    time="Dec 13, 2018 · 7 min read"/>
+                    <Article 
+                      url="https://miro.medium.com/max/2073/1*yHRoGYIxxTaPVLO3m7JkYw.jpeg" 
+                      judul="One Man’s Execution Convinced Me the Death Penalty Is Wrong" 
+                      isi="I used to think ‘an eye for an eye’ was fair and just, but I’ve seen enough to know it’s not" 
+                      user="D.A. Kirk" 
+                      time="Dec 13, 2018 · 7 min read"/>
                   </Grid>
               </Grid>
             </div>
@@ -197,41 +195,40 @@ class Home extends Component {
                       <hr/>
                     </div>
                     <div style={{marginBottom:'50px'}}>
-                    {popular.map(item =>
-                      <Popular
-                        id={item.id}
-                        judul={item.judul}
-                        isi={item.isi}
-                        user={item.user}
-                        time={item.time}
-                      />
-                      )}
+                      {popular.map(item =>
+                        <Popular
+                          id={item.id}
+                          judul={item.judul}
+                          isi={item.isi}
+                          user={item.user}
+                          time={item.time}
+                        />
+                        )}
                     </div>
                     <div>
                       <hr/>
-                    <Button>Help</Button>
-                    <Button>Status</Button>
-                    <Button>Writers</Button>
-                    <Button>Blog</Button>
-                    <Button>Careers</Button>
-                    <Button>Privacy</Button>
-                    <Button>Term</Button>
-                    <Button>About</Button>
+                      <Button>Help</Button>
+                      <Button>Status</Button>
+                      <Button>Writers</Button>
+                      <Button>Blog</Button>
+                      <Button>Careers</Button>
+                      <Button>Privacy</Button>
+                      <Button>Term</Button>
+                      <Button>About</Button>
                     </div>
                   </div>
                 </Grid>
                 <Grid item xs={7}>
                   <div style={{}}>
-                  {recommendation.map(item => 
-                    <Recommendation
-                      url={item.url}
-                      judul={item.judul} 
-                      isi={item.isi}
-                      user={item.user}
-                      time={item.time}
-                    />
-                    )}
-
+                    {recommendation.map(item => 
+                      <Recommendation
+                        url={item.url}
+                        judul={item.judul} 
+                        isi={item.isi}
+                        user={item.user}
+                        time={item.time}
+                      />
+                      )}
                   </div>
                 </Grid>
               </Grid>
@@ -242,7 +239,6 @@ class Home extends Component {
         
       {/* </Container> */}
       </div>
-     
     );
   }
 }

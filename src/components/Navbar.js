@@ -13,6 +13,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import InputBase from '@material-ui/core/InputBase';
 import {Link} from 'react-router-dom'
+import Button from '@material-ui/core/Button'
 
 
 const useStyles = makeStyles(theme => ({
@@ -97,14 +98,15 @@ function ButtonAppBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
- 
+
           <IconButton color="inherit">
               <Badge badgeContent={0} color="secondary">
                 <NotificationsIcon />
               </Badge>
             </IconButton>
           {/* <ModalLogin/> */}
-          <Register name="Sign Up" variant="outlined"/>
+          <Link to="/register" style={{textDecoration:'none'}}><Button variant="outlined">Sign Up</Button></Link>
+          {/* <Register name="Sign Up"/> */}
           {/* <Fab size="small" color="secondary">
             R
           </Fab> */}
@@ -116,7 +118,7 @@ function ButtonAppBar() {
       </div>
       </AppBar>
       {/* </React.Fragment> */}
-     </div>
+    </div>
   );
 }
 

@@ -4,6 +4,8 @@ import App from './App';
 import CategoryPage from './content/CategoryPage';
 import ArticleDetails from './content/ArticleDetails'
 import Comment from './content/Comment'
+import Login from './Login'
+import Register from './Register'
 import './index.css';
 import {BrowserRouter as Router, Route, Link, } from 'react-router-dom';
 
@@ -14,6 +16,9 @@ ReactDOM.render(
       <Route exact path="/categorypage" component={CategoryPage}/>
       <Route exact path="/articledetail" component={ArticleDetails}/>
       <Route exact path="/comment" component={Comment}/>
+      <Route exact path="/login" component={Login}/>
+      <Route exact path="/register" component={Register}/>
+      
     </div>
   </Router>
   ,document.getElementById('root')

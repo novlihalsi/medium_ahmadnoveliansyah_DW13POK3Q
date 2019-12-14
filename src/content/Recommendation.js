@@ -9,33 +9,33 @@ import Typography from '@material-ui/core/Typography';
 
 
 const Recommendation = (props) => {
-    return(
+  return(
+      
+    <Card elevation="0" style={{height:'150px', display:'flex', marginBottom:'20px'}}>
         
-        <Card elevation="0" style={{height:'150px', display:'flex', marginBottom:'20px'}}>
-            
-            <div style={{flex:'1'}}>
-            <CardActionArea>
-                <CardContent>
-                <Typography component="h5" variant="h6" style={{fontWeight:'bold'}}>
-                    {props.judul}
-                </Typography>
-                <Typography variant="subtitle2" color="black" style={{fontSize:'12px'}}>
-                    {props.user}
-                </Typography>
-                <Typography variant="caption" color="textSecondary">
-                    {props.time}
-                </Typography>
-                </CardContent>
-                </CardActionArea>
-            </div>
-            <CardMedia
-            style={{width:'150px'}}
-            image={props.url}
-            title="Live from space album cover"
-            />
-        </Card>
-        
-    );
+      <div style={{flex:'1'}}>
+        <CardActionArea>
+          <CardContent>
+            <Typography component="h5" variant="h6" style={{fontWeight:'bold'}}>
+              {props.judul}
+            </Typography>
+            <Typography variant="subtitle2" color="black" style={{fontSize:'12px'}}>
+              {props.user}
+            </Typography>
+            <Typography variant="caption" color="textSecondary">
+              {props.time}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </div>
+      <CardMedia
+      style={{width:'150px'}}
+      image={props.url}
+      title="Live from space album cover"
+      />
+    </Card>
+      
+  );
 
 }
 
