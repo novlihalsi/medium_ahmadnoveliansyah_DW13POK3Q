@@ -17,6 +17,7 @@ import Button from '@material-ui/core/Button'
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Avatar } from '@material-ui/core';
+import NewStories from '../content/NewStory'
 
 
 
@@ -64,8 +65,8 @@ export function ProfilButton() {
         </MenuItem>
         <MenuItem style={{color:'green'}}>Become a member</MenuItem>
         <hr/>
-        <MenuItem onClick={handleClose}>New Story</MenuItem>
-        <MenuItem onClick={handleClose}>Stories</MenuItem>
+        <Link to="/newstory" style={{textDecoration:'none', color:'black'}}><MenuItem>New Story</MenuItem></Link>
+        <Link to="/yourstories" style={{textDecoration:'none', color:'black'}}><MenuItem >Stories</MenuItem></Link>
         <MenuItem onClick={handleClose}>Stats</MenuItem>
         <hr/>
         <MenuItem onClick={handleClose}>Bookmark</MenuItem>
