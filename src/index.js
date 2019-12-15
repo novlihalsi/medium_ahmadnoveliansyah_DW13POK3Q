@@ -6,6 +6,7 @@ import ArticleDetails from './content/ArticleDetails'
 import Comment from './content/Comment'
 import Login from './Login'
 import Register from './Register'
+import NewStory from './content/NewStory'
 import './index.css';
 import {BrowserRouter as Router, Route, Link, } from 'react-router-dom';
 
@@ -18,6 +19,7 @@ ReactDOM.render(
       <Route exact path="/comment" component={Comment}/>
       <Route exact path="/login" component={Login}/>
       <Route exact path="/register" component={Register}/>
+      <Route exact path="/newstory" component={NewStory}/>
       
     </div>
   </Router>

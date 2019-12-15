@@ -20,7 +20,7 @@ import { Avatar } from '@material-ui/core';
 
 
 
-function ProfilButton() {
+export function ProfilButton() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = event => {
