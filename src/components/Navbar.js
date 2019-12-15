@@ -67,7 +67,8 @@ export function ProfilButton() {
         <hr/>
         <Link to="/newstory" style={{textDecoration:'none', color:'black'}}><MenuItem>New Story</MenuItem></Link>
         <Link to="/yourstories" style={{textDecoration:'none', color:'black'}}><MenuItem >Stories</MenuItem></Link>
-        <MenuItem onClick={handleClose}>Stats</MenuItem>
+        <Link to="/stats" style={{textDecoration:'none', color:'black'}}><MenuItem>Stats</MenuItem></Link>
+        
         <hr/>
         <MenuItem onClick={handleClose}>Bookmark</MenuItem>
         <MenuItem onClick={handleClose}>Profile</MenuItem>
