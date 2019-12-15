@@ -9,6 +9,7 @@ import Register from './Register'
 import NewStory from './content/NewStory'
 import YourStories from './content/YourStories'
 import Stats from './stats/Stats'
+import Bookmark from './content/Bookmark'
 import './index.css';
 import {BrowserRouter as Router, Route, Link, } from 'react-router-dom';
 
@@ -24,6 +25,7 @@ ReactDOM.render(
       <Route exact path="/newstory" component={NewStory}/>
       <Route exact path="/yourstories" component={YourStories}/>
       <Route exact path="/stats" component={Stats}/>
+      <Route exact path="/bookmark" component={Bookmark}/>
 
       
     </div>

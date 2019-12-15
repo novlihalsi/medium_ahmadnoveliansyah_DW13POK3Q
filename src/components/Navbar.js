@@ -70,7 +70,7 @@ export function ProfilButton() {
         <Link to="/stats" style={{textDecoration:'none', color:'black'}}><MenuItem>Stats</MenuItem></Link>
         
         <hr/>
-        <MenuItem onClick={handleClose}>Bookmark</MenuItem>
+        <Link to="/bookmark" style={{textDecoration:'none', color:'black'}}><MenuItem>Bookmark</MenuItem></Link>
         <MenuItem onClick={handleClose}>Profile</MenuItem>
         <MenuItem onClick={handleClose}>Setting</MenuItem>
         <MenuItem onClick={handleClose}>Help</MenuItem>
@@ -147,7 +147,7 @@ function ButtonAppBar() {
       {/* <React.Fragment> */}
       <div>
         <Toolbar style={{marginRight:320, marginLeft:330}}>
-          <Link to="/" className={classes.title}><Typography variant="h4">
+          <Link to="/" className={classes.title}><Typography variant="h4" style={{fontWeight:'bold'}}>
             Medium
           </Typography></Link>
           <div className={classes.search}>
