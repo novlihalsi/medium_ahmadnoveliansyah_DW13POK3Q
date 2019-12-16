@@ -8,7 +8,7 @@ function createData(time, amount) {
 }
 
 const data = [
-  createData("January", 0),
+  createData("January", 4000),
   createData('February', 0),
   createData('Maret', 0),
   createData('April', 0),
