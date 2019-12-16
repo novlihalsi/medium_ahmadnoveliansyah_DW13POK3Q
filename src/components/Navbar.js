@@ -50,18 +50,17 @@ export function ProfilButton() {
         style={{marginTop:40}}
       >
         <MenuItem>
-        <div style={{display:'flex'}}>
-          <div style={{flex:1, marginRight:8, marginTop:5}}>
-            <Avatar src="https://miro.medium.com/fit/c/48/48/1*w1dyAyH5Pc_XysvAyd3C_Q.jpeg"/>
-            
+          <div style={{display:'flex'}}>
+            <div style={{flex:1, marginRight:8, marginTop:5}}>
+              <Avatar src="https://miro.medium.com/fit/c/48/48/1*w1dyAyH5Pc_XysvAyd3C_Q.jpeg"/>
+              
+            </div>
+            <div style={{flex:1}}>
+              <Typography variant="subtitle1" style={{fontWeight:'bold'}}>Andy Raskin</Typography>
+              <Link to="/articleperson" style={{textDecoration:'none', color:'black'}}><Typography variant="caption">@AndyRaskin1902982717</Typography></Link>
+              
+            </div>
           </div>
-          <div style={{flex:1}}>
-            <Typography variant="subtitle1" style={{fontWeight:'bold'}}>Andy Raskin</Typography>
-            <Typography variant="caption">@AndyRaskin1902982717</Typography>
-          </div>
-
-          
-        </div>
         </MenuItem>
         <MenuItem style={{color:'green'}}>Become a member</MenuItem>
         <hr/>
@@ -71,7 +70,8 @@ export function ProfilButton() {
         
         <hr/>
         <Link to="/bookmark" style={{textDecoration:'none', color:'black'}}><MenuItem>Bookmark</MenuItem></Link>
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <Link to="/profile" style={{textDecoration:'none', color:'black'}}><MenuItem>Profile</MenuItem></Link>
+        
         <MenuItem onClick={handleClose}>Setting</MenuItem>
         <MenuItem onClick={handleClose}>Help</MenuItem>
         <MenuItem onClick={handleClose}>Logout</MenuItem>
