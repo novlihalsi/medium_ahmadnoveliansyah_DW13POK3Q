@@ -11,8 +11,14 @@ import { Link } from 'react-router-dom';
 const Popular = (props) => {
   return(
       
-    <Card elevation="0" style={{height:'100px', display:'flex', marginBottom:'20px'}}>
-      <div style={{flex:'1'}}>
+    <Card elevation="0" style={{height:'120px', display:'flex',marginLeft:20}}>
+      
+      <div style={{flex:1, marginTop:'15px'}}>
+        <Typography variant="h4" color="textSecondary">
+          {props.id}
+        </Typography>
+      </div>
+      <div style={{flex:5}}>
         <CardActionArea>
           <CardContent>
             <Typography component="h5" style={{fontWeight:'bold', fontSize:'15px'}}>
@@ -26,11 +32,6 @@ const Popular = (props) => {
             </Typography>
           </CardContent>
         </CardActionArea>
-      </div>
-      <div style={{marginRight:'10px', marginTop:'15px'}}>
-        <Typography variant="h4" color="textSecondary">
-          {props.id}
-        </Typography>
       </div>
     </Card>
       

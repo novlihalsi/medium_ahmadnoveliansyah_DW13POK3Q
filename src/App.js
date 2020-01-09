@@ -1,21 +1,16 @@
-import React, {Component} from 'react';
-import Home from './content/Home';
-import ArticleDetails from './content/ArticleDetails'
-
+import React, { Component } from "react";
+import Home from "./content/Home";
+import ArticleDetails from "./content/ArticleDetails";
 
 class App extends Component {
-  
-  render () {
+  render() {
     return (
-
       <div>
-        <Home/>
+        <Home />
         {/* <ArticleDetails/> */}
-
       </div>
-     
     );
   }
 }
-  
+
 export default App;
